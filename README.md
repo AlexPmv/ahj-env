@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/s70b273cknik2m35?svg=true)](https://ci.appveyor.com/project/AlexPmv/ahj-env)
+
 **Важно**: все задачи к данной лекции можно выполнить в виде одного репозитория (т.е. допускается не делать отдельные репозитории на каждую задачу).
 
 ---

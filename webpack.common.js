@@ -27,13 +27,25 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader, 'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+      {
+        test: /\.(ico)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
       },
     ],
   },
@@ -47,4 +59,7 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
   ],
+  stats: {
+    children: true,
+  },
 };
